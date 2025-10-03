@@ -55,8 +55,8 @@ void QuickSort (vector<T>& v, int ini, int fin){
 
     if(ini<fin){
         int pivote=Partition(v,ini,fin);
-        QuickSort(v, ini, pivot - 1);
-        QuickSort(v, pivot + 1, fin);
+        QuickSort(v, ini, pivote - 1);
+        QuickSort(v, pivote + 1 , fin);
     }
 
 }
