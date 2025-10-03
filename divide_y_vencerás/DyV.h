@@ -41,7 +41,7 @@ template<typename T>
 int Partition(vector<T> v, int ini, int fin){
     int j=ini;
     int pivote=v[fin];
-    for(int i=ini; i>fin; i++){
+    for(int i=ini; i<fin; i++){
         if(v[i]<=pivote){
             swap(v[j],v[i]);
             j++;
