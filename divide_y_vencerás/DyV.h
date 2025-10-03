@@ -51,8 +51,30 @@ swap(v[j], v[fin]);
 return j;
 }
 template<typename T>
-int QuickSort(){
+void QuickSort (vector<T>& v, int ini, int fin){ 
+
+    if(ini<fin){
+        int pivote=Partition(v,ini,fin);
+        QuickSort(v, ini, pivot - 1);
+        QuickSort(v, pivot + 1, fin);
+    }
 
 }
+
+template<typename T>
+int PartitionFirst(vector<T>& v, int ini, int fin) {
+    swap(v[ini], v[fin]); 
+    return Partition(v, ini, fin); 
+}
+
+template<typename T>
+void QuickSortFirst(vector<T>& v, int ini, int fin) {
+    if (ini < fin) {
+        int pivote = PartitionFirst(v, ini, fin);
+        QuickSortFirst(v, ini, pivote - 1);
+        QuickSortFirst(v, pivote + 1, fin);
+    }
+}
+
 
 
