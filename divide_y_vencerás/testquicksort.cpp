@@ -10,6 +10,7 @@ template<typename T>
 void printVector(const vector<T>& v) {
     for (auto x : v) cout << x << " ";
     cout << endl;
+    
 }
 
 
