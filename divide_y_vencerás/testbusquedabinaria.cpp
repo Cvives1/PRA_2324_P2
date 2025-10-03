@@ -9,6 +9,7 @@ int main() {
     int x1 = 7;
     int pos1 = BusquedaBinaria(x1, asc, 0, asc.size() - 1);
 
+    
     if (pos1 != -1)
         cout << "ASC: El valor " << x1 << " está en la posición " << pos1 << endl;
     else
